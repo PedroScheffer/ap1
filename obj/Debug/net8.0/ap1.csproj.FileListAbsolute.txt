@@ -12,3 +12,4 @@ C:\Users\psche\Desktop\ADS\S3 Laboratório de Programação\Aula08\ap1\obj\Debug
 C:\Users\psche\Desktop\ADS\S3 Laboratório de Programação\Aula08\ap1\obj\Debug\net8.0\ap1.pdb
 C:\Users\psche\Desktop\ADS\S3 Laboratório de Programação\Aula08\ap1\obj\Debug\net8.0\ap1.genruntimeconfig.cache
 C:\Users\psche\Desktop\ADS\S3 Laboratório de Programação\Aula08\ap1\obj\Debug\net8.0\ref\ap1.dll
+C:\Users\psche\Desktop\ADS\S3 Laboratório de Programação\Aula08\ap1\obj\Debug\net8.0\ap1.sourcelink.json

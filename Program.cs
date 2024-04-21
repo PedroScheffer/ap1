@@ -16,6 +16,7 @@
     else 
     {
         Console.WriteLine("Digite um número válido!");
+        continue;
     }
     
     Console.WriteLine("Digite o seu peso: ");
@@ -27,22 +28,43 @@
    
     double imc = peso / (altura * altura);
 
+    string faixaEtaria = "";
+
+    if (idade < 10)
+    {
+        faixaEtaria = "Criança";
+    }
+
+    else if (idade >= 10 && idade < 20)
+    {
+        faixaEtaria = "Adolescente";
+    }
+
+    else if (idade >= 20 && idade < 60)
+    {
+        faixaEtaria = "Adulto";
+    }
+    else
+    {
+        faixaEtaria = "Idoso";
+    }
+
     if (imc < 18.5)
     {
-        Console.WriteLine($"{nome} | {idade} anos, está abaixo do peso ideal!");
+        Console.WriteLine($"\n{nome} \nFaixa etária: {faixaEtaria} \nEstá abaixo do peso ideal!");
     }
     else if (imc >= 18.5 && imc < 24.9)
     {
-        Console.WriteLine($"{nome} | {idade} anos, está no peso ideal!");
+        Console.WriteLine($"\n{nome} \nFaixa etária: {faixaEtaria} \nEstá no peso ideal!");
     }
     else if (imc >= 25.0 && imc < 29.9)
     {
-        Console.WriteLine($"{nome} | {idade} anos, está acima do peso ideal!");
+        Console.WriteLine($"\n{nome} \nFaixa etária: {faixaEtaria} \nEstá acima do peso ideal!");
     }
 
     else
     {
-        Console.WriteLine($"{nome} | {idade} anos, está obeso!");
+        Console.WriteLine($"\n{nome} \nFaixa etária: {faixaEtaria} \nEstá obeso!");
     }
 
 }
