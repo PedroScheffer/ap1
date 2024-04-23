@@ -1,11 +1,9 @@
-﻿while (true)
+﻿string input;
+do
 {
-    Console.WriteLine("Digite a sua altura (em centimetros) ou 'sair' para encerrar o programa: ");
-    string input = Console.ReadLine();
+    Console.WriteLine("Digite a sua altura (em centimetros): ");
+    input = Console.ReadLine();
     
-    if (input.ToLower() == "sair")
-    break;
-
     double altura;
 
     if (Double.TryParse(input, out altura)) 
@@ -51,20 +49,23 @@
 
     if (imc < 18.5)
     {
-        Console.WriteLine($"\n{nome} \nFaixa etária: {faixaEtaria} \nEstá abaixo do peso ideal!");
+        Console.WriteLine($"\nNome: {nome} \nFaixa etária: {faixaEtaria} \nEstá abaixo do peso ideal!");
     }
     else if (imc >= 18.5 && imc < 24.9)
     {
-        Console.WriteLine($"\n{nome} \nFaixa etária: {faixaEtaria} \nEstá no peso ideal!");
+        Console.WriteLine($"\nNome: {nome} \nFaixa etária: {faixaEtaria} \nEstá no peso ideal!");
     }
     else if (imc >= 25.0 && imc < 29.9)
     {
-        Console.WriteLine($"\n{nome} \nFaixa etária: {faixaEtaria} \nEstá acima do peso ideal!");
+        Console.WriteLine($"\nNome: {nome} \nFaixa etária: {faixaEtaria} \nEstá acima do peso ideal!");
     }
 
     else
     {
-        Console.WriteLine($"\n{nome} \nFaixa etária: {faixaEtaria} \nEstá obeso!");
+        Console.WriteLine("\nNome:" + nome + "\nFaixa etária:" + faixaEtaria + "\nEstá obeso!");
     }
 
-}
+    Console.WriteLine("\nDigite 'sair' para encerrar o programa ou pressione Enter para continuar: ");
+    input = Console.ReadLine();
+    
+} while (input.ToLower() != "sair");
